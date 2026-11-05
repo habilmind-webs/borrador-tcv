@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOMBRE DE LA WEB — borrador</title>
+  <meta name="description" content="Descripción corta de la web (cámbiala)." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+  <!-- 1) BANNER FLASH (obligatorio, no quitar). Va antes del contenido. -->
+  <script>
+    (function () {
+      function langFromPath() {
+        var seg = (location.pathname.split('/')[1] || '').toLowerCase();
+        if (seg === 'en') return 'en'; if (seg === 'cat') return 'cat';
+        if (seg === 'pt' || seg === 'br') return 'pt'; return 'es';
+      }
+      function loadWidget() {
+        var s = document.createElement('script');
+        s.src = 'https://oddamxbficfqouiojzst.supabase.co/functions/v1/serve-widget?lang=' + langFromPath() + '&t=' + Date.now();
+        s.setAttribute('data-hm-widget', '1');
+        document.body.appendChild(s);
+      }
+      if (document.readyState === 'complete') loadWidget(); else window.addEventListener('load', loadWidget, { once: true });
+    })();
+  </script>
+
+  <main id="app">
+    <header class="hero">
+      <!-- 2) IMÁGENES PROPIAS: pon tus imágenes en public/img/ (webp/avif, con width y height). Nada de imágenes enlazadas de otras plataformas. -->
+      <img src="/img/hero.svg" width="1200" height="600" alt="Imagen principal (cámbiala por una propia)" fetchpriority="high" />
+      <h1>NOMBRE DE LA WEB</h1>
+      <p>Esto es un borrador. Cambia este texto.</p>
+    </header>
+  </main>
+
+  <!-- 3) AVISO DE COOKIES + GA4 (Consent v2). GA4 SOLO se carga cuando el visitante pulsa «Aceptar». -->
+  <div id="cookies" hidden>
+    <p>Usamos cookies de analítica para mejorar la web. <a href="/privacidad">Más información</a></p>
+    <button id="ck-aceptar">Aceptar</button> <button id="ck-rechazar">Rechazar</button>
+  </div>
+
+  <!-- 4) CHAT DE OFELIA (obligatorio, no quitar) -->
+  <script src="https://go.habilmind.net/webchat/widget.js" async></script>
+</body>
+</html>
