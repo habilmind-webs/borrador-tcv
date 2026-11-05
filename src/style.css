@@ -703,11 +703,10 @@ a[href="#"][data-pendiente]{cursor:not-allowed}
 .cierre-cta{flex-wrap:wrap;gap:1rem}
 /* EMT 05/11: logo completo ya incluye bloque «examen… / para colegios»; sin .marca-txt ni span EMT. Reglas arriba. */
 
-/* TCV 05/11: wordmark texto hasta que Rosario dé el logo (data-pendiente="logo-tcv") */
-.marca-tcv{gap:.75rem;color:var(--fg)}
-.marca-tcv .marca-sigla{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;color:#1e3a5f}
-.marca-tcv .marca-nom{font-size:.75rem;color:var(--mut);font-weight:500;max-width:14rem}
-.pie-logo-txt{display:inline-block;font-size:1.75rem;font-weight:700;letter-spacing:-.02em;color:#fff;line-height:1}
+/* TCV 05/11: logo completo alpha (PNG de Rosario, laberinto + «tcv» + «test de comprensión verbal para colegios», 979×204); mismo tratamiento que EMT: cabecera solo img a color, pie en blanco por filtro */
+.marca-tcv img{height:44px;width:auto;max-width:min(72vw,260px);object-fit:contain;object-position:left center}
+@media (max-width:860px){.marca-tcv img{height:38px;width:auto}}
+.pie-logo-tcv{height:40px!important;width:auto!important;max-width:100%;margin:0!important;display:inline-block!important;filter:brightness(0) invert(1)!important}
 .ind-tabla{width:100%;border-collapse:collapse;margin:1.25rem 0 0;font-size:.9375rem;background:#fff;border:1px solid var(--lin,#e5e2d8);border-radius:12px;overflow:hidden}
 .ind-tabla th,.ind-tabla td{padding:.85rem 1.1rem;text-align:left;border-bottom:1px solid var(--lin,#e5e2d8);vertical-align:top}
 .ind-tabla th{font-weight:600;color:var(--fg);background:#f6f5ef}
