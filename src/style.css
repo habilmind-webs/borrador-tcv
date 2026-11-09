@@ -75,7 +75,6 @@ strong,b,dt,summary{font-weight:700}
 .dos{display:grid;gap:2.5rem;grid-template-columns:1.1fr .9fr;align-items:start}
 .checks{list-style:none;padding:0;margin:0}.checks li{position:relative;padding:.45rem 0 .45rem 2rem}
 .checks li::before{content:"✓";position:absolute;left:0;top:.55rem;width:1.35rem;height:1.35rem;border:1px solid var(--rule);background:var(--surf);color:var(--fg);font-size:.75rem;display:grid;place-items:center;font-weight:500}
-.tarjeta-imp{background:var(--card);border:1px solid var(--rule);padding:2rem;box-shadow:var(--sombra)}.tarjeta-imp p{margin:0;color:var(--mut)}
 .bloque{margin-top:3rem}.bloque-cab{display:flex;align-items:baseline;gap:1rem;border-bottom:1px solid var(--rule);padding-bottom:.75rem;margin-bottom:1.5rem}
 .num{font-family:'Inter',system-ui,sans-serif;font-style:normal;font-weight:500;font-size:2rem;color:var(--acc);line-height:1}.bloque-tit{margin:0;font-size:clamp(1.05rem,1.4vw,1.25rem)}
 .pruebas{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
@@ -343,7 +342,7 @@ html.hmc-abierto{overflow:hidden}
 @media (min-width:1024px){.insignia-icce{justify-content:flex-start}}
 /* Etiquetas y textos a la izquierda */
 .eti{margin:0 0 .75rem;color:var(--mut);font-size:.75rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase}
-.eti-caja{display:inline-block;padding:.35rem .85rem;border:1px solid var(--borde);background:var(--card);color:var(--pri);letter-spacing:.08em}
+.eti-caja{display:inline-block;width:fit-content;max-width:100%;padding:.35rem .85rem;border:1px solid var(--borde);background:var(--card);color:var(--pri);letter-spacing:.08em}
 .resalte{position:relative;font-weight:700!important}
 .lead-izq{color:var(--mut);font-size:1.0625rem;max-width:48rem;margin:0 0 2rem}
 .lead-izq strong{color:var(--fg)}
@@ -365,11 +364,12 @@ html.hmc-abierto{overflow:hidden}
 @media (min-width:700px){.ficha{grid-template-columns:repeat(2,1fr)}.spec:first-child{grid-column:1/-1}}
 @media (min-width:1024px){.ficha{grid-template-columns:repeat(6,1fr)}.spec{grid-column:span 2}.spec:first-child{grid-column:span 2}.spec-ancha{grid-column:span 3}}
 /* Qué es */
-.quees-grid{display:grid;gap:2rem}.quees-bloques{display:grid;gap:1.25rem}
+.quees-grid{display:grid;gap:2rem;align-items:start}
+.quees-texto .lead-izq{font-size:1.125rem;line-height:1.7;margin-bottom:0;max-width:36rem}
 .ambitos{list-style:none;margin:1rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
 .ambitos li{padding:.4rem .9rem;border:1px solid var(--rule);background:var(--surf);font-weight:500;font-size:.9375rem}
 .tarjeta-opc{border-left:4px solid var(--acc)}
-@media (min-width:1024px){.quees-grid{grid-template-columns:1fr 1fr;gap:4rem;align-items:center}}
+@media (min-width:1024px){.quees-grid{grid-template-columns:1fr 1fr;gap:4rem;align-items:center}.quees-texto{display:flex;flex-direction:column;justify-content:center;align-items:flex-start}.img-quees{margin-top:0}}
 /* Rejillas de tarjetas con filete marino (como .benef de BAP) */
 .rejilla{display:grid;gap:1.5rem;grid-template-columns:1fr}
 .tarjeta{background:var(--card);border:1px solid var(--borde);border-top:3px solid var(--acc);padding:1.75rem;box-shadow:var(--sombra)}
@@ -543,7 +543,7 @@ html.hmc-abierto{overflow:hidden}
 @media (min-width:1024px){.cierre-tarjeta{padding:4rem}.cierre .cierre-lead{font-size:1.125rem}.cierre-ben li{font-size:1rem}}
 @media (max-width:480px){.cierre-cta .btn-cierre{width:100%;padding:0 1.5rem}}
 /* Qué es: foto real (pedido de Rosario vía DC, 03/11/2026), mismo radio y 4:3 que #necesidad */
-.img-quees-foto{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:1.25rem}
+.img-quees-foto{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:1.25rem;box-shadow:0 4px 24px rgba(32,41,60,.08)}
 /* Qué aporta: estructura de «El Socioemociograma permite» (provides) — pedido de Rosario vía DC, 03/11/2026 */
 #que-aporta{position:relative;overflow:hidden;padding:3rem 0}
 .aporta-halo{display:none}
