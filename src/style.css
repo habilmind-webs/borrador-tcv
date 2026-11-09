@@ -376,6 +376,7 @@ html.hmc-abierto{overflow:hidden}
 .tarjeta h3{margin:0 0 .75rem}.tarjeta p{margin:0;color:var(--mut)}.tarjeta p strong{color:var(--fg)}
 @media (min-width:700px){.r2,.r3,.r4{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:1024px){.r3{grid-template-columns:repeat(3,1fr)}.r4{grid-template-columns:repeat(4,1fr)}}
+@media (min-width:700px){.rejilla-ind.r3{grid-template-columns:repeat(3,1fr)}}
 .estilos{margin-top:1.5rem;border-top-color:var(--pri)}
 .opc{display:inline-block;margin-left:.5rem;padding:.15rem .6rem;border:1px solid var(--borde);background:var(--surf);font-size:.75rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);vertical-align:middle}
 .estilos-lista{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
