@@ -333,7 +333,6 @@ html.hmc-abierto{overflow:hidden}
 /* Hero: insignias ICCE / Habilmind / BAP y hueco de foto */
 .hero-dev{flex-wrap:wrap;gap:.5rem}
 .insignia-icce{flex-wrap:wrap;justify-content:center}.insignia-icce:hover{background:transparent}
-.insignia-nom{font-size:.875rem;color:var(--mut);font-weight:500;line-height:1.35}
 .insignia-icce img.logo-icce{height:3.5rem;width:3.5rem;flex:none}
 @media (max-width:639px){.insignia-icce img.logo-icce{height:3rem;width:3rem}}
 .insignia-bap>span:first-child{max-width:19rem;text-align:left;line-height:1.35;font-size:.875rem}
