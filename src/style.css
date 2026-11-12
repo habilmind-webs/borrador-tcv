@@ -716,3 +716,30 @@ a[href="#"][data-pendiente]{cursor:not-allowed}
 
 /* Franja «Desarrollado por ICCE · Y la tecnología de Habilmind» con ventana de 932–1023 px CSS (p. ej. pantalla grande a media pantalla o con escalado 150–200 %): misma disposición y ancho que a 1440 px (3 filas, 497 px), centrada; a 1024 px o más y por debajo de 768 px no cambia nada */
 @media (min-width:768px) and (max-width:1023px){.hero-dev{max-width:31.05rem;margin-left:auto;margin-right:auto;justify-content:flex-start}.hero-dev .insignia-icce{justify-content:flex-start}}
+
+/* === PRECIOS (/precios/) === */
+.pr-hero{padding:3.5rem 0 1.5rem;text-align:center}
+.pr-hero h1{font-size:clamp(2rem,4vw,2.75rem);margin:0 0 .75rem}
+.pr-hero .lead{margin:0 auto}
+.pr-sec{padding:1rem 0 4.375rem}
+.pr-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;align-items:start}
+@media (min-width:900px){.pr-grid{grid-template-columns:1fr 1fr 1.25fr}}
+.pr-card{position:relative;background:var(--card);border:1px solid var(--borde);padding:2rem 1.5rem 1.5rem}
+.pr-card-dest{border-color:var(--pri);box-shadow:0 10px 30px -18px rgba(0,0,0,.35)}
+.pr-tag{position:absolute;top:-.8rem;left:1.25rem;display:inline-block;padding:.2rem .7rem;font-size:.75rem;font-weight:500;letter-spacing:.04em;background:var(--card);border:1px solid var(--borde);color:var(--pri)}
+.pr-card-dest .pr-tag{background:var(--pri);border-color:var(--pri);color:#fff}
+.pr-card h2{font-size:1.25rem;margin:0 0 .25rem}
+.pr-sub{margin:0 0 1rem;color:var(--mut);font-size:.875rem}
+.pr-logo{display:block;height:2.25rem;width:auto;max-width:100%;margin:0 0 1rem}
+.pr-ej{margin:0 0 .75rem;font-size:.875rem;font-weight:500;color:var(--fg)}
+.pr-txt{margin:0 0 1.25rem;color:var(--mut);font-size:.9375rem}
+.pr-precio{margin:.5rem 0 0;font-size:2.5rem;font-weight:500;letter-spacing:-.02em;line-height:1.1;color:#000}
+.pr-unidad{margin:.25rem 0 1.25rem;color:var(--mut);font-size:.875rem}
+.pr-lista{list-style:none;margin:0 0 1.5rem;padding:0;display:grid;gap:.6rem}
+.pr-lista li{display:flex;gap:.6rem;align-items:flex-start;font-size:.9375rem;line-height:1.45}
+.pr-lista li svg{flex:none;margin-top:.1rem;color:var(--acc)}
+.pr-herr{list-style:none;margin:.25rem 0 1rem 1.75rem;padding:0;display:grid;grid-template-columns:1fr;gap:.35rem 1rem;font-size:.8125rem;line-height:1.35}
+@media (min-width:480px){.pr-herr{grid-template-columns:1fr 1fr}}
+.pr-herr a{color:var(--mut);text-decoration:none}.pr-herr a:hover{color:var(--fg);text-decoration:underline}
+.pr-btns{display:grid;gap:.6rem}
+.pr-btns .btn{width:100%;height:2.75rem}

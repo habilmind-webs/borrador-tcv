@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Precios del TCV · Test de Comprensión Verbal | Habilmind</title>
+  <meta name="description" content="Precios del Test de Comprensión Verbal (TCV): 8.95 USD por alumno y año escolar, o inclúyelo en tu suscripción a Habilmind junto a 24 herramientas de evaluación. Pruébalo gratis en una clase/salón." />
+  <link rel="canonical" href="https://tcv.habilmind.net/precios/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="TCV · Habilmind" />
+  <meta property="og:title" content="Precios del TCV · Test de Comprensión Verbal | Habilmind" />
+  <meta property="og:description" content="Precios del Test de Comprensión Verbal (TCV): 8.95 USD por alumno y año escolar, o inclúyelo en tu suscripción a Habilmind junto a 24 herramientas de evaluación. Pruébalo gratis en una clase/salón." />
+  <meta property="og:url" content="https://tcv.habilmind.net/precios/" />
+  <meta property="og:image" content="https://tcv.habilmind.net/img/og-tcv.jpg?v=20261110" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:alt" content="Test de Comprensión Verbal (TCV)" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tcv.habilmind.net/img/og-tcv.jpg?v=20261110" />
+  <meta name="theme-color" content="#fafaf5" />
+  <!-- Favicon: /favicon.ico idéntico al de CAI/socioemociograma.com; ?v= para saltarse la caché -->
+  <link rel="icon" href="/favicon.ico?v=20261105-tcvfav" sizes="any" />
+
+  <script>/* /slug/index.html -> /slug/ en la barra de direcciones */if(/\/index\.html$/.test(location.pathname))history.replaceState(null,"",location.pathname.replace(/index\.html$/,"")+location.search+location.hash);</script>
+  <!-- CHAT DE OFELIA (obligatorio, no quitar): mismo snippet que socioemociograma, BAP, CAI, COB, CPEA y EMT, en el head -->
+  <script src="https://go.habilmind.net/webchat/widget.js" async></script>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+  <!-- 1) BANNER FLASH (obligatorio, no quitar). Mismo patrón que socioemociograma:
+       contenedor #flash-notice-widget + observer de altura (--flash-widget-height) + serve-widget al principio del body. -->
+  <div id="flash-notice-widget" style="position:relative;z-index:60;"></div>
+  <script>
+    (function() {
+      var WIDGET_ID_PREFIX = 'hm-notice-';
+      var CSS_VAR = '--flash-widget-height';
+      var resizeObservers = [];
+
+      function isPopup(widget) {
+        return !!(widget.querySelector('[style*="position:fixed"], [style*="position: fixed"]'));
+      }
+
+      function getWidgetHeight() {
+        var widgets = document.querySelectorAll('[id^="' + WIDGET_ID_PREFIX + '"]');
+        var maxVisible = 0;
+        for (var i = 0; i < widgets.length; i++) {
+          var w = widgets[i];
+          if (isPopup(w)) continue;
+          if (w.style.display === 'none') continue;
+          var rect = w.getBoundingClientRect();
+          // Visible portion of the widget still touching the top of viewport
+          var visible = Math.max(0, Math.min(rect.bottom, w.offsetHeight));
+          if (rect.top > 0) visible = w.offsetHeight; // not yet scrolled past top
+          if (rect.bottom <= 0) visible = 0; // fully scrolled away
+          else if (rect.top < 0) visible = rect.bottom; // partially scrolled
+          if (visible > maxVisible) maxVisible = visible;
+        }
+        document.documentElement.style.setProperty(CSS_VAR, maxVisible + 'px');
+      }
+
+      function observeWidget(widget) {
+        if (isPopup(widget)) return;
+        new MutationObserver(getWidgetHeight).observe(widget, { attributes: true, attributeFilter: ['style'] });
+        if (typeof ResizeObserver !== 'undefined') {
+          var ro = new ResizeObserver(getWidgetHeight);
+          ro.observe(widget);
+          resizeObservers.push(ro);
+        }
+      }
+
+      var bodyObserver = new MutationObserver(function(mutations) {
+        var shouldUpdate = false;
+        for (var i = 0; i < mutations.length; i++) {
+          var m = mutations[i];
+          if (m.type === 'childList') {
+            for (var j = 0; j < m.addedNodes.length; j++) {
+              var node = m.addedNodes[j];
+              if (node.nodeType === 1 && node.id && node.id.indexOf(WIDGET_ID_PREFIX) === 0) {
+                shouldUpdate = true;
+                observeWidget(node);
+              }
+            }
+            for (var j = 0; j < m.removedNodes.length; j++) {
+              var node = m.removedNodes[j];
+              if (node.nodeType === 1 && node.id && node.id.indexOf(WIDGET_ID_PREFIX) === 0) {
+                shouldUpdate = true;
+              }
+            }
+          }
+        }
+        if (shouldUpdate) getWidgetHeight();
+      });
+
+      bodyObserver.observe(document.body, { childList: true });
+      setTimeout(getWidgetHeight, 100);
+      window.addEventListener('load', getWidgetHeight);
+      window.addEventListener('scroll', getWidgetHeight, { passive: true });
+      window.addEventListener('resize', getWidgetHeight);
+    })();
+  </script>
+  <script>
+    (function () {
+      var BASE = 'https://oddamxbficfqouiojzst.supabase.co/functions/v1/serve-widget';
+      function langFromPath() {
+        var seg = (location.pathname.split('/')[1] || '').toLowerCase();
+        if (seg === 'en') return 'en'; if (seg === 'cat' || seg === 'ca') return 'cat';
+        if (seg === 'pt' || seg === 'br' || seg === 'pt-br' || seg === 'pt-pt') return 'pt'; return 'es';
+      }
+      document.documentElement.style.setProperty('--flash-widget-height', '0px');
+      var s = document.createElement('script');
+      s.src = BASE + '?lang=' + langFromPath();
+      s.async = true;
+      s.setAttribute('data-hm-lang', langFromPath());
+      document.body.insertBefore(s, document.body.firstChild);
+    })();
+  </script>
+
+  <header class="cab">
+    <div class="wrap cab-in">
+      <!-- Logo TCV pendiente (wordmark); Rosario aún no da asset -->
+      <a class="marca marca-cai marca-tcv" href="/" aria-label="TCV, Test de Comprensión Verbal, inicio"><img src="/img/logo-tcv.webp?v=20261109-tcvlogonuevo" width="834" height="203" alt="Logo del TCV" fetchpriority="high" /></a>
+      <button class="cab-menu" type="button" aria-expanded="false" aria-controls="cab-nav" aria-label="Menú"><span class="cab-menu-ico" aria-hidden="true"><span></span><span></span><span></span></span></button>
+      <nav class="cab-nav" id="cab-nav" aria-label="Principal">
+        <a href="/#que-es">Qué es</a><a href="/#ficha-tecnica">Aplicación</a><a href="/#indicadores">Indicadores</a><a href="/#informes">Informes</a>
+        <div class="cab-mas">
+          <button class="cab-mas-btn" type="button" aria-expanded="false" aria-controls="cab-mas-lista">Más <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <ul class="cab-mas-lista" id="cab-mas-lista"><li><a href="https://docs.habilmind.com/herramientas-disponibles/herramientas-cognitivas/test-de-comprension-verbal" target="_blank" rel="noopener">Documentación</a></li><li><a href="https://docs.habilmind.com/herramientas-disponibles/herramientas-cognitivas/test-de-comprension-verbal/infografia" target="_blank" rel="noopener">Infografía</a></li><li><a href="/#recursos">Tour guiado</a></li></ul>
+        </div>
+        <a class="btn btn-sec btn-sm" href="https://go.habilmind.net/webchat/cta/soporte?boton=borrador-tcv&amp;site=borrador-tcv" target="_blank" rel="noopener" data-ofelia-cta="soporte" data-ofelia-boton="borrador-tcv">Soporte</a>
+        <a class="btn btn-sec btn-sm" href="https://go.habilmind.net/webchat/cta/tcv?boton=header&amp;site=borrador-tcv" target="_blank" rel="noopener" data-ofelia-cta="tcv" data-ofelia-boton="header">Reunión o llamada</a>
+        <a class="btn btn-pri btn-sm" href="/precios/">Precios</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app">
+    <nav class="migas" aria-label="Ruta de navegación">
+      <div class="wrap"><ol><li><a href="/">Inicio</a></li><li><span aria-current="page">Precios</span></li></ol></div>
+    </nav>
+    <section class="pr-hero">
+      <div class="wrap">
+        <h1>Precios del TCV</h1>
+        <p class="lead">Elige la opción que mejor se adapte a las necesidades de tu centro educativo</p>
+      </div>
+    </section>
+    <section class="pr-sec">
+      <div class="wrap">
+        <div class="pr-grid">
+          <article class="pr-card">
+            <span class="pr-tag">Regalo para tu aula</span>
+            <h2>Pruébalo gratis</h2>
+            <p class="pr-sub">en una clase/salón</p>
+            <p class="pr-ej">Por ejemplo: 4º de Primaria A</p>
+            <p class="pr-txt">Aplica el TCV en una clase/salón de tu centro educativo y descubre todo lo que puede ofrecerte antes de tomar una decisión.</p>
+            <ul class="pr-lista"><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Sin tarjeta</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Sin compromiso</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Resultados inmediatos</span></li></ul>
+            <div class="pr-btns"><a class="btn btn-pri" href="https://go.habilmind.net/webchat/cta/tcv?boton=precios-regalo&amp;site=borrador-tcv" target="_blank" rel="noopener" data-ofelia-cta="tcv" data-ofelia-boton="precios-regalo">Solicitar alta gratuita</a></div>
+          </article>
+          <article class="pr-card">
+            <span class="pr-tag">Individual</span>
+            <img class="pr-logo" loading="lazy" src="/img/logo-tcv.webp?v=20261109-tcvlogonuevo" width="834" height="203" alt="Logo del TCV" />
+            <h2>TCV</h2>
+            <p class="pr-sub">Test de Comprensión Verbal</p>
+            <p class="pr-precio">8.95 USD</p>
+            <p class="pr-unidad">por alumno / año escolar</p>
+            <ul class="pr-lista"><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Evaluación de la comprensión verbal</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Comprensión verbal global</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Informe para el estudiante</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Análisis de grupo</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Informe para la familia</span></li></ul>
+            <div class="pr-btns"><a class="btn btn-pri" href="https://go.habilmind.net/webchat/cta/tcv?boton=precios-individual&amp;site=borrador-tcv" target="_blank" rel="noopener" data-ofelia-cta="tcv" data-ofelia-boton="precios-individual">Solicitar alta</a><a class="btn btn-sec" href="https://go.habilmind.net/webchat/cta/tcv?boton=precios-individual-reunion&amp;site=borrador-tcv" target="_blank" rel="noopener" data-ofelia-cta="tcv" data-ofelia-boton="precios-individual-reunion">Reunión o llamada</a></div>
+          </article>
+          <article class="pr-card pr-card-dest">
+            <span class="pr-tag">Recomendado</span>
+            <h2>Consigue el TCV con tu suscripción a Habilmind</h2>
+            <ul class="pr-lista" style="margin-top:1.25rem;margin-bottom:.25rem"><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>TCV + 24 herramientas de evaluación</span></li></ul>
+            <ul class="pr-herr"><li><a href="https://sbe.com.es" target="_blank" rel="noopener">Screening de Bienestar Emocional</a></li><li><a href="https://habilmind.com/test-de-bullying" target="_blank" rel="noopener">Test del Bullying</a></li><li><a href="https://habilmind.com/autoconcepto-y-autoestima" target="_blank" rel="noopener">Autoconcepto y Autoestima</a></li><li><a href="https://habilmind.com/tendencias-personales" target="_blank" rel="noopener">Tendencias Personales</a></li><li><a href="https://habilmind.com/habilidades-fundamentales" target="_blank" rel="noopener">Batería de Habilidades Fundamentales</a></li><li><a href="https://atiendo.com.es" target="_blank" rel="noopener">Atiendo</a></li><li><a href="https://habilmind.com/memory" target="_blank" rel="noopener">Memory</a></li><li><a href="https://habilmind.com/calculo-mental" target="_blank" rel="noopener">Cálculo Mental</a></li><li><a href="https://habilmind.com/edint" target="_blank" rel="noopener">EDINT</a></li><li><a href="https://habilmind.com/estilos-de-aprendizaje" target="_blank" rel="noopener">Estilos de Aprendizaje</a></li><li><a href="https://habilmind.com/funciones-ejecutivas" target="_blank" rel="noopener">Funciones Ejecutivas</a></li><li><a href="https://habilmind.com/habilidades-generales" target="_blank" rel="noopener">Habilidades Generales del Aprendizaje</a></li><li><a href="https://rogers.org.es/" target="_blank" rel="noopener">Cuestionarios de K. Rogers</a></li><li><a href="https://habilmind.com/eitef" target="_blank" rel="noopener">EITEF</a></li><li><a href="https://habilmind.com/screening-visual" target="_blank" rel="noopener">Screening Visual</a></li><li><a href="https://preferenciasprofesionales.com" target="_blank" rel="noopener">Preferencias Profesionales</a></li><li><a href="https://habilmind.com/abuso-pantallas" target="_blank" rel="noopener">Cuestionario de Abuso de Pantallas (CUDAP)</a></li><li><a href="https://habilmind.com/cuestionario-de-riesgos-en-internet" target="_blank" rel="noopener">Cuestionario de Riesgos en Internet</a></li><li><a href="https://habilmind.com/convivencia-familiar" target="_blank" rel="noopener">Convivencia Familiar</a></li><li><a href="https://habilmind.com/dinamicas-familiares" target="_blank" rel="noopener">Dinámicas Familiares</a></li><li><a href="https://es.habilmind.com/autoevaluacion-de-competencias-docentes" target="_blank" rel="noopener">Autoevaluación de Competencias Docentes</a></li><li><a href="https://habilmind.com/competencias-digitales-docentes" target="_blank" rel="noopener">Autoevaluación de Competencias Digitales</a></li><li><a href="https://habilmind.com/estilos-de-comportamiento" target="_blank" rel="noopener">Estilos de Comportamiento</a></li><li><a href="https://habilmind.com/estilo-toma-decisiones" target="_blank" rel="noopener">Estilos en la Toma de Decisiones</a></li></ul>
+            <ul class="pr-lista"><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Uso ilimitado durante el año</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Evaluaciones cognitivas y académicas</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Panel de gestión integral</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Soporte prioritario</span></li></ul>
+            <div class="pr-btns"><a class="btn btn-pri" href="https://go.habilmind.net/webchat/cta/tcv?boton=precios-suscripcion&amp;site=borrador-tcv" target="_blank" rel="noopener" data-ofelia-cta="tcv" data-ofelia-boton="precios-suscripcion">Más información<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a class="btn btn-sec" href="https://go.habilmind.net/webchat/cta/tcv?boton=precios-suscripcion-reunion&amp;site=borrador-tcv" target="_blank" rel="noopener" data-ofelia-cta="tcv" data-ofelia-boton="precios-suscripcion-reunion">Reunión o llamada</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="wrap pie-wrap">
+      <div class="pie-cab">
+        <a class="pie-marca" href="/" aria-label="TCV, inicio"><span class="pie-placa"><img class="pie-logo pie-logo-tcv" src="/img/logo-tcv.webp?v=20261109-tcvlogonuevo" width="834" height="203" alt="Logo del TCV" loading="lazy" /></span></a>
+        <p class="pie-titulo">Test de Comprensión Verbal (TCV)</p>
+        <p class="pie-desc">Identifica de forma temprana posibles dificultades de comprensión verbal y orienta una intervención preventiva. Una herramienta de la <a href="https://borrador-bap.2-31-95-201.sslip.io/">Batería de Ampliación Psicopedagógica (BAP)</a>.</p>
+      </div>
+      <nav class="pie-eco" aria-label="Ecosistema Habilmind">
+        <p class="pie-etq">Ecosistema Habilmind</p>
+        <ul><li><span class="eco-ico"><img src="/img/fav/ecosistema.webp?v=20261105-ecoalpha" width="20" height="20" alt="" loading="lazy" /></span><div><a href="https://www.habilmind.com" target="_blank" rel="noopener">Habilmind</a><p>Plataforma para la excelencia de colegios.</p></div></li><li><span class="eco-ico"><img src="/img/fav/ecosistema.webp?v=20261105-ecoalpha" width="20" height="20" alt="" loading="lazy" /></span><div><a href="https://www.emotionalmind.es" target="_blank" rel="noopener">Emotional Mind</a><p>Programa de entrenamiento socioemocional.</p></div></li><li><span class="eco-ico"><img src="/img/fav/ecosistema.webp?v=20261105-ecoalpha" width="20" height="20" alt="" loading="lazy" /></span><div><a href="https://www.datametra.com" target="_blank" rel="noopener">Datámetra</a><p>La plataforma más avanzada de encuestas para colegios.</p></div></li><li><span class="eco-ico"><img src="/img/fav/ecosistema.webp?v=20261105-ecoalpha" width="20" height="20" alt="" loading="lazy" /></span><div><a href="https://www.superadmisiones.com" target="_blank" rel="noopener">Superadmisiones</a><p>La plataforma líder para la selección y admisión de estudiantes en colegios y universidades.</p></div></li><li><span class="eco-ico"><img src="/img/fav/ecosistema.webp?v=20261105-ecoalpha" width="20" height="20" alt="" loading="lazy" /></span><div><a href="https://www.superemocional.com" target="_blank" rel="noopener">Superemocional</a><p>Modelo integral para el desarrollo socioemocional en educación.</p></div></li><li><span class="eco-ico"><img src="/img/fav/ecosistema.webp?v=20261105-ecoalpha" width="20" height="20" alt="" loading="lazy" /></span><div><a href="https://www.psicometra.com" target="_blank" rel="noopener">Psicómetra</a><p>Plataforma para psicólogos.</p></div></li><li><span class="eco-ico"><img src="/img/fav/ecosistema.webp?v=20261105-ecoalpha" width="20" height="20" alt="" loading="lazy" /></span><div><a href="https://www.superevolucion.com" target="_blank" rel="noopener">Superevolución</a><p>Plataforma para la mejora avanzada de estudiantes dirigida a familias y colegios.</p></div></li><li><span class="eco-ico"><img src="/img/fav/ecosistema.webp?v=20261105-ecoalpha" width="20" height="20" alt="" loading="lazy" /></span><div><a href="https://www.universidatos.com" target="_blank" rel="noopener">Universidatos</a><p>Plataforma para la retención de estudiantes en universidades.</p></div></li><li><span class="eco-ico"><img src="/img/fav/ecosistema.webp?v=20261105-ecoalpha" width="20" height="20" alt="" loading="lazy" /></span><div><a href="https://www.equiposdeorientacion.com" target="_blank" rel="noopener">Equipos de Orientación</a><p>Plataforma para los Equipos de Orientación.</p></div></li><li><span class="eco-ico"><img src="/img/fav/ecosistema.webp?v=20261105-ecoalpha" width="20" height="20" alt="" loading="lazy" /></span><div><a href="https://www.colegiospublicos.com" target="_blank" rel="noopener">Colegios Públicos</a><p>Plataforma para evaluar y optimizar el rendimiento de alumnos en colegios públicos con mínimo esfuerzo.</p></div></li><li><span class="eco-ico"><img src="/img/fav/ecosistema.webp?v=20261105-ecoalpha" width="20" height="20" alt="" loading="lazy" /></span><div><a href="https://www.institutos.net" target="_blank" rel="noopener">Institutos Públicos</a><p>Plataforma para analizar, de forma ágil, los factores que inciden en el aprendizaje en institutos públicos.</p></div></li><li><span class="eco-ico"><img src="/img/fav/ecosistema.webp?v=20261105-ecoalpha" width="20" height="20" alt="" loading="lazy" /></span><div><a href="https://www.osh.org.es" target="_blank" rel="noopener">Obra Social de Habilmind</a><p>Iniciativa gratuita que apoya a instituciones comprometidas con una educación más equitativa.</p></div></li><li><span class="eco-ico"><img src="/img/fav/ecosistema.webp?v=20261105-ecoalpha" width="20" height="20" alt="" loading="lazy" /></span><div><a href="https://safeacademysystem.com" target="_blank" rel="noopener">Safe Academy System</a><p>Sistema integral de prevención y evidencia para la protección institucional de colegios.</p></div></li><li><span class="eco-ico"><img src="/img/fav/ecosistema.webp?v=20261105-ecoalpha" width="20" height="20" alt="" loading="lazy" /></span><div><a href="https://www.cpdm.org.es" target="_blank" rel="noopener">CPDM</a><p>Compliance para la prevención de delitos contra los menores en el ámbito escolar.</p></div></li><li><span class="eco-ico"><img src="/img/fav/ecosistema.webp?v=20261105-ecoalpha" width="20" height="20" alt="" loading="lazy" /></span><div><a href="https://edugrupos.com" target="_blank" rel="noopener">Edugrupos</a><p>Plataforma para la generación inteligente de grupos equilibrados y funcionales en centros educativos.</p></div></li><li><span class="eco-ico"><img src="/img/fav/ecosistema.webp?v=20261105-ecoalpha" width="20" height="20" alt="" loading="lazy" /></span><div><a href="https://multicolegio.com" target="_blank" rel="noopener">Multicolegios</a><p>Dashboard para supervisar, comparar y gestionar múltiples centros educativos desde una única plataforma.</p></div></li><li><span class="eco-ico"><img src="/img/fav/ecosistema.webp?v=20261105-ecoalpha" width="20" height="20" alt="" loading="lazy" /></span><div><a href="https://parvularia.com/" target="_blank" rel="noopener">Parvularia</a><p>Solución psicopedagógica integral para escuelas infantiles que impulsa el desarrollo y el aprendizaje desde la primera infancia.</p></div></li></ul>
+      </nav>
+      <div class="pie-tels">
+        <p class="pie-etq">Teléfonos por país</p>
+        <p class="tels"><span class="tel"><span class="tel-nombre"><img src="/img/flags/ad.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">Andorra</span></span> <a href="tel:+34911676361">+34 911 676 361</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/ar.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">Argentina</span></span> <a href="tel:+56229146515">+56 2 2914 6515</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/bo.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">Bolivia</span></span> <a href="tel:+56229146515">+56 2 2914 6515</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/br.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">Brasil</span></span> <a href="tel:+551152410660">+55 11 5241 0660</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/cl.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">Chile</span></span> <a href="tel:+56229146515">+56 2 2914 6515</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/co.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">Colombia</span></span> <a href="tel:+576013571300">+57 601 357 1300</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/cr.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">Costa Rica</span></span> <a href="tel:+5078388228">+507 8388 228</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/ec.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">Ecuador</span></span> <a href="tel:+56229146515">+56 2 2914 6515</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/sv.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">El Salvador</span></span> <a href="tel:+50321130306">+503 2113 0306</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/es.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">España</span></span> <a href="tel:+34911676361">+34 911 676 361</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/gt.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">Guatemala</span></span> <a href="tel:+50223154252">+502 2315 4252</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/hn.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">Honduras</span></span> <a href="tel:+50223154252">+502 2315 4252</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/mx.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">México</span></span> <a href="tel:+524775820234">+52 477 582 0234</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/ni.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">Nicaragua</span></span> <a href="tel:+50223154252">+502 2315 4252</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/pa.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">Panamá</span></span> <a href="tel:+5078388228">+507 8388 228</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/py.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">Paraguay</span></span> <a href="tel:+56229146515">+56 2 2914 6515</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/pe.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">Perú</span></span> <a href="tel:+56229146515">+56 2 2914 6515</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/pt.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">Portugal</span></span> <a href="tel:+351911818097">+351 911 818 097</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/pr.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">Puerto Rico</span></span> <a href="tel:+17876899424">+1 787 689 9424</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/do.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">República Dominicana</span></span> <a href="tel:+18483312696">+1 848 331 2696</a></span><span class="tel-sep" aria-hidden="true">|</span><span class="tel"><span class="tel-nombre"><img src="/img/flags/uy.webp" width="20" height="15" alt="" loading="lazy" /><span class="tel-pais">Uruguay</span></span> <a href="tel:+56229146515">+56 2 2914 6515</a></span><span class="tel tel-emerg-celda"><span class="tel-nombre"><span aria-hidden="true">⚠️</span><span class="tel-pais">Emergencia</span></span> <a href="https://habilmind.es/emergencias" target="_blank" rel="noopener">clic aquí</a></span></p>
+        <p class="pie-emerg">⚠️ Emergencia: clic <a href="https://habilmind.es/emergencias" target="_blank" rel="noopener">aquí</a></p>
+      </div>
+      <div class="pie-contacto">
+        <a class="pie-wa" href="https://api.whatsapp.com/send/?phone=34644700900&amp;text=Iniciar+conversaci%C3%B3n&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.4 9.4 0 0 1-1.44-5.01c0-5.2 4.23-9.43 9.44-9.43a9.4 9.4 0 0 1 9.43 9.44c0 5.2-4.24 9.42-9.44 9.42m8.03-17.46A11.3 11.3 0 0 0 12.05.7C5.79.7.7 5.79.7 12.04c0 2 .52 3.95 1.52 5.67L.6 23.6l6.02-1.58a11.3 11.3 0 0 0 5.42 1.38h.01c6.25 0 11.34-5.09 11.35-11.34 0-3.03-1.18-5.88-3.32-8.02"/></svg><span>+34 644700900</span></a>
+        <a href="tel:+34911676361">Llámanos al +34911676361</a>
+        <a href="https://www.linkedin.com/company/habilmind/mycompany/" target="_blank" rel="noopener">Habilmind en LinkedIn</a>
+        <a href="mailto:info@habilmind.com">Escríbenos a info@habilmind.com</a>
+        <a href="https://www.habilmind.com/empleo" target="_blank" rel="noopener">Empleo</a>
+      </div>
+      <div class="pie-legal">
+        <span>© <span id="pie-anio">2026</span> HABILMIND S.L.</span>
+        <a href="https://trust.habilmind.dev/politica-cookies-ecosistema-web" target="_blank" rel="noopener">Política de cookies</a>
+        <button type="button" class="pie-ck" data-cookie-preferences onclick="window.openCookiePreferences&&window.openCookiePreferences()">Gestión de cookies</button>
+        <a href="https://trust.habilmind.dev/aviso-legal-ecosistema-web" target="_blank" rel="noopener">Aviso legal</a>
+        <a href="https://trust.habilmind.dev/politica-privacidad-ecosistema-web" target="_blank" rel="noopener">Política de privacidad</a>
+      </div>
+      <p class="pie-disc">Los nombres de los alumnos que aparecen en las capturas han sido generados de manera aleatoria por un software y no se corresponden con los resultados de ningún alumno identificado.</p>
+    </div>
+    <script>document.getElementById('pie-anio').textContent=new Date().getFullYear()</script>
+  </footer>
+
+  <!-- CONSENTIMIENTO DE COOKIES: lo pinta src/cookies.js (banner + panel). GA4 solo tras aceptar «Análisis». -->
+</body>
+</html>
