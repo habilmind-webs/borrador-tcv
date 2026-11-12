@@ -730,7 +730,10 @@ a[href="#"][data-pendiente]{cursor:not-allowed}
 .pr-card-dest .pr-tag{background:var(--pri);border-color:var(--pri);color:#fff}
 .pr-card h2{font-size:1.25rem;margin:0 0 .25rem}
 .pr-sub{margin:0 0 1rem;color:var(--mut);font-size:.875rem}
-.pr-logo{display:block;height:2.25rem;width:auto;max-width:100%;margin:0 0 1rem}
+.pr-ind{display:flex;align-items:center;gap:.75rem;margin:0 0 .75rem}
+.pr-fav{flex:none;width:3rem;height:3rem;padding:.5rem;background:var(--surf);border:1px solid var(--rule);display:flex;align-items:center;justify-content:center}
+.pr-fav img{display:block;width:100%;height:100%;object-fit:contain}
+.pr-ind h2{margin:0;font-size:1.25rem;font-weight:700;line-height:1.2}
 .pr-ej{margin:0 0 .75rem;font-size:.875rem;font-weight:500;color:var(--fg)}
 .pr-txt{margin:0 0 1.25rem;color:var(--mut);font-size:.9375rem}
 .pr-precio{margin:.5rem 0 0;font-size:2.5rem;font-weight:500;letter-spacing:-.02em;line-height:1.1;color:#000}
